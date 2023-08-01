@@ -1,0 +1,103 @@
+@import './variables.modules';
+
+body {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 1.5vh;
+  width: 100%;
+  height: 100%;
+  color: $dark;
+  background-color: $white;
+  box-sizing: border-box;
+}
+
+footer {
+  color: $dark;
+}
+
+.dark {
+  background-color: transparent;
+  color: $white;
+  transition: all 400ms;
+
+  a,
+  i,
+  li {
+    color: $white;
+    transition: color 400ms;
+  }
+
+  a:visited {
+    color: $white;
+  }
+
+  footer {
+    color: $white;
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .4;
+  background: #fff;
+  z-index: -0;
+  
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.wrap{
+  margin-left: 25%;
+  background-position: 100px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  background-position: 0px;
+  }
+}
+
+
+.pageHeading {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  font-family: 'Bree Serif', serif;
+  padding-bottom: 10px;
+  /* border-bottom: solid 2px gray ; */
+  color: black;
+}
+
+.pageHeading-main {
+  font-size: 3em;
+  color: black;
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pageHeading-main::before,
+.pageHeading-main::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  margin: 15px;
+  background: #3498db;
+  display: inline-block;
+}
+
+.pageHeading-aux {
+  margin-top: 1em;
+  color: black;
+  font-size: 1.1em;
+}

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+@import url('https://fonts.googleapis.com/css?family=Alkatra');
+@import '../../variables.modules.scss';
+
+.home-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid black
+}
+
+#home{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: fit-content;
+      // margin-left: 0px;
+    }
+}
+
+.img{
+    &--bg{
+    opacity: 0.2;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  &--navi{
+    border-radius: 100%;
+    width: 40vh;
+    height: 40vh;
+    z-index: 1;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(40%);
+  }
+
+}
+
+.hello{
+    color: black;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 0px;
+    font-family:'Alegreya Sans', sans-serif;
+}
+
+.name-heading{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Alkatra';
+    // margin: 10px;
+    color: rgb(225, 61, 61);
+}
+
+.bio{
+    color: black;
+    font-size: 24px;
+    line-height: 150%;
+    // margin: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align:justify;
+    font-style: italic;
+    font-family:'Alegreya Sans';
+}
+
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  @media only screen and (min-width: 940px) {
+    font-size: 3rem;
+    text-align: left;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  text-align: center;
+  @media only screen and (min-width: 940px) {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+.hand {
+  animation-name: wave;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+a {
+  color: black;
+  transition: black 200ms ease;
+}
+
+a:hover {
+  color: lightgray;
+  transition: color 200ms ease;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.logo {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 100%;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-3px);
+    transition: $transition;
+    box-shadow: 5px 5px rgb(56, 53, 53);
+  }
+}
+
+.logo-btn {
+  margin: 0.2vh 1vh;
+  border-radius:100%;
+  border: none;
+  cursor: pointer;
+}
+
+
+nav {
+  transition: $transition;
+}
+
+.active {
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+}
+
+li {
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-3px);
+    transition: $transition;
+  }
+}
+
+.link:hover {
+  color: unset;
+}
